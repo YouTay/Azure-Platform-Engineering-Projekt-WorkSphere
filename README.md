@@ -308,7 +308,7 @@ Genehmigte Private Endpoint-Verbindung innerhalb des dedizierten Subnets.
 
 Private Anbindung des SQL Servers an das Produktions-VNet.
 
-![SQL Private Endpoint Prod](docs/screenshots/Sql-prod-privateendpoint.png)
+![SQL Private Endpoint Prod](docs/screenshots/Sql-server-prod-pe.png)
 
 ---
 
