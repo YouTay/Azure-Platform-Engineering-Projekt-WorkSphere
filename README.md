@@ -154,7 +154,7 @@ docs/decisions/
 
 ### 🔹 Dev Umgebung – Ressourcenübersicht
 
-![Dev Ressourcen](docs/screenshots/dev-resources.png)
+![Dev Ressourcen](docs/screenshots/dev-ressources.png)
 
 ---
 
@@ -184,13 +184,13 @@ docs/decisions/
 
 ### 🔹 SQL Server – Private Endpoint
 
-![SQL Private Endpoint](docs/screenshots/Sql-server-private-endpoint.png)
+![SQL Private Endpoint](docs/screenshots/Sql-server-privateendpoint.png)
 
 ---
 
 ### 🔹 Prod Umgebung – Ressourcenübersicht
 
-![Prod Ressourcen](docs/screenshots/prod-resources.PNG)
+![Prod Ressourcen](docs/screenshots/prod-ressources.png)
 
 ---
 
