@@ -200,14 +200,14 @@ Alle Ressourcen enthalten:
 
 ---
 
-# Projektstruktur
+## Projektstruktur
 
 infra/
-├── bootstrap/ # Remote State Infrastruktur
-├── dev/ # Entwicklungsumgebung
-├── prod/ # Produktionsumgebung
+├── bootstrap/   # Remote State Infrastruktur
+├── dev/         # Entwicklungsumgebung
+├── prod/        # Produktionsumgebung
 └── modules/
-└── network/ # Wiederverwendbares Netzwerkmodul
+    └── network/ # Wiederverwendbares Netzwerkmodul
 
 ---
 
