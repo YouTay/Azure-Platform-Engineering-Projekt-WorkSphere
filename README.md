@@ -266,7 +266,7 @@ Rollenbasierte Zugriffskontrolle (RBAC) mit Managed Identity für Applikationen.
 
 Private Connectivity über Private Endpoint zur Minimierung der Angriffsfläche.
 
-![SQL Private Endpoint Dev](docs/screenshots/Sql-dev-privateendpoint.png)
+![SQL Private Endpoint Dev](docs/screenshots/Sql-server-privateendpoint.png)
 
 ---
 
