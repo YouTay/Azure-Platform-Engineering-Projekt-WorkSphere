@@ -44,39 +44,6 @@ Dieses Projekt demonstriert meine Fähigkeiten im Bereich:
 
 ## High-Level Architekturdiagramm
 
-flowchart LR
-    subgraph Dev
-        VNET_DEV[VNet Dev]
-        APP_DEV[App Subnet]
-        PE_DEV[Private Endpoint Subnet]
-        KV_DEV[Key Vault]
-        SQL_DEV[Azure SQL]
-
-        VNET_DEV --> APP_DEV
-        VNET_DEV --> PE_DEV
-        PE_DEV --> KV_DEV
-        PE_DEV --> SQL_DEV
-    end
-
-    subgraph Prod
-        VNET_PROD[VNet Prod]
-        APP_PROD[App Subnet]
-        PE_PROD[Private Endpoint Subnet]
-        KV_PROD[Key Vault]
-        SQL_PROD[Azure SQL]
-
-        VNET_PROD --> APP_PROD
-        VNET_PROD --> PE_PROD
-        PE_PROD --> KV_PROD
-        PE_PROD --> SQL_PROD
-    end
-
-    TF[Terraform]
-    STATE[Azure Storage - Remote State]
-
-    TF --> Dev
-    TF --> Prod
-    TF --> STATE
 
 # Kernkomponenten
 
@@ -255,23 +222,99 @@ infra/
 
 # Architektur- und Implementierungsnachweise
 
-## Dev Umgebung – Ressourcenübersicht
+## Remote Terraform State
+
+### Azure Storage – State Container
+
+Getrennte State-Dateien für Dev und Prod zur sicheren Environment-Isolation.
+
+![Terraform State Container](docs/screenshots/tf-state-container.png)
+
+---
+
+## Architekturübersicht
+
+### Plattform-Architektur (Dev & Prod)
+
+Darstellung der vollständigen Infrastruktur inklusive Remote State, Terraform-Anbindung, VNet-Struktur und Private Endpoints.
+
+![Architekturdiagramm](docs/screenshots/architecture-diagram.png)
+
+---
+
+# Dev Umgebung
+
+## Ressourcenübersicht – Dev
+
+Alle bereitgestellten Ressourcen der Entwicklungsumgebung inklusive VNet, NSG, Private Endpoints, SQL und Key Vault.
+
+![Dev Ressourcenübersicht](docs/screenshots/dev-ressources.png)
+
+---
 
 ## Key Vault – RBAC & Identity Modell (Dev)
 
-## Key Vault – Networking (Prod)
+Rollenbasierte Zugriffskontrolle (RBAC) mit Managed Identity für Applikationen.
+
+![Key Vault IAM Dev](docs/screenshots/Kv-iam-png.png)
+
+---
+
+## SQL Server – Private Endpoint (Dev)
+
+Private Connectivity über Private Endpoint zur Minimierung der Angriffsfläche.
+
+![SQL Private Endpoint Dev](docs/screenshots/sql-dev-privateendpoint.png)
+
+---
+
+## SQL Server – Öffentlicher Zugriff eingeschränkt
+
+Konfiguration des Public Network Access gemäß Security-Policy.
+
+![SQL Public Access Dev](docs/screenshots/sql-dev-publicaccess.png)
+
+---
+
+# Prod Umgebung
+
+## Ressourcenübersicht – Prod
+
+Produktionsumgebung mit erhöhter Sicherheitskonfiguration (z. B. Purge Protection, höheres SQL SKU, Criticality Tag = high).
+
+![Prod Ressourcenübersicht](docs/screenshots/prod-ressources.png)
+
+---
+
+## Key Vault – Netzwerk-Konfiguration (Prod)
+
+Public Access deaktiviert, Zugriff ausschließlich über Private Endpoint.
+
+![Key Vault Netzwerk Prod](docs/screenshots/kv-prod-networking.png)
+
+---
 
 ## Key Vault – Private Endpoint (Prod)
 
-## SQL Server – Public Access deaktiviert
+Genehmigte Private Endpoint-Verbindung innerhalb des dedizierten Subnets.
 
-## SQL Server – Private Endpoint
-
-## Prod Umgebung – Ressourcenübersicht
-
-## Remote Terraform State (Azure Storage Backend)
+![Key Vault Private Endpoint Prod](docs/screenshots/kv-prod-privateendpoint.png)
 
 ---
+
+## SQL Server – Private Endpoint (Prod)
+
+Private Anbindung des SQL Servers an das Produktions-VNet.
+
+![SQL Private Endpoint Prod](docs/screenshots/sql-prod-privateendpoint.png)
+
+---
+
+## SQL Server – Public Network Access deaktiviert (Prod)
+
+Öffentlicher Zugriff vollständig deaktiviert gemäß Zero-Trust-Prinzip.
+
+![SQL Public Access Off Prod](docs/screenshots/Sql-server-publicaccess-off.png)
 
 # Zusammenfassung
 
