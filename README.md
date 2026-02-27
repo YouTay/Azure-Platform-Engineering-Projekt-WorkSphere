@@ -178,7 +178,7 @@ docs/decisions/
 
 ### 🔹 SQL Server – Public Access deaktiviert
 
-![SQL Public Access Off](docs/screenshots/Sql-server-public-access-off.png)
+![SQL Public Access Off](docs/screenshots/Sql-server-publicaccess-off.png)
 
 ---
 
