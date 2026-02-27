@@ -44,6 +44,7 @@ Dieses Projekt demonstriert meine Fähigkeiten im Bereich:
 
 ## High-Level Architekturdiagramm
 
+![Architekturdiagramm](docs/screenshots/Architekturdiagramm.png)
 
 # Kernkomponenten
 
@@ -179,7 +180,7 @@ Wartbarkeit, Skalierbarkeit und Wiederverwendbarkeit.
 # Governance
 
 ## Naming Convention
-<resource-type>-<environment>-<region>-<workload>-<instance>
+<resource-type> - <environment> - <region> - <workload> - <instance>
 
 ### Beispiele
 rg-prod-we-platform-01
@@ -200,6 +201,7 @@ Alle Ressourcen enthalten:
 ---
 
 # Projektstruktur
+
 infra/
 ├── bootstrap/ # Remote State Infrastruktur
 ├── dev/ # Entwicklungsumgebung
@@ -238,7 +240,7 @@ Getrennte State-Dateien für Dev und Prod zur sicheren Environment-Isolation.
 
 Darstellung der vollständigen Infrastruktur inklusive Remote State, Terraform-Anbindung, VNet-Struktur und Private Endpoints.
 
-![Architekturdiagramm](docs/screenshots/architecture-diagram.png)
+![Architekturdiagramm](docs/screenshots/Architekturdiagramm.png)
 
 ---
 
@@ -272,7 +274,7 @@ Private Connectivity über Private Endpoint zur Minimierung der Angriffsfläche.
 
 Konfiguration des Public Network Access gemäß Security-Policy.
 
-![SQL Public Access Dev](docs/screenshots/sql-dev-publicaccess.png)
+![SQL Public Access Dev](docs/screenshots/Sql-server-publicaccess-off.png)
 
 ---
 
