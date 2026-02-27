@@ -199,16 +199,16 @@ Alle Ressourcen enthalten:
 **Ziel:** Transparenz, Kostenkontrolle und Enterprise-Readiness.
 
 ---
-
 ## Projektstruktur
 
+```
 infra/
-├── bootstrap/ # Remote State Infrastruktur
-├── dev/ # Entwicklungsumgebung
-├── prod/ # Produktionsumgebung
+├── bootstrap/   # Remote State Infrastruktur
+├── dev/         # Entwicklungsumgebung
+├── prod/        # Produktionsumgebung
 └── modules/
-└── network/ # Wiederverwendbares Netzwerkmodul
-
+    └── network/ # Wiederverwendbares Netzwerkmodul
+```
 ---
 
 # Sicherheitsprinzipien
