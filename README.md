@@ -150,19 +150,70 @@ docs/decisions/
 
 ---
 
-## 🚀 Ziel dieses Projekts
+## 📸 Architektur- und Implementierungsnachweise
 
-Dieses Projekt demonstriert:
+Die folgende Auswahl an Screenshots dokumentiert die implementierte Azure Platform-Architektur in Dev und Prod.
 
-- Strukturierte Azure-Plattform-Architektur
-- Terraform Best Practices
-- Enterprise-nahe Infrastrukturpatterns
-- Sicherheitsorientiertes Design
-- Saubere Dev/Prod Trennung
+---
 
-Es dient als Portfolio-Projekt zur Bewerbung im Bereich:
+### 🔹 Dev Umgebung – Ressourcenübersicht
 
-- Cloud Engineering
-- Azure Engineering
-- DevOps Engineering
-- Platform Engineering
+Saubere Ressourcentrennung, Naming Convention und vollständige Infrastruktur via Terraform.
+
+![Dev Ressourcen](docs/screenshots/dev-resources.png)
+
+---
+
+### 🔹 Key Vault – RBAC & Identity Modell (Dev)
+
+RBAC-first Design mit Managed Identity und klaren Rollen-Zuweisungen.
+
+![Key Vault IAM](docs/screenshots/Kv-iam-png.png)
+
+---
+
+### 🔹 Key Vault – Networking (Prod)
+
+Öffentlicher Zugriff deaktiviert. Zugriff ausschließlich über Private Endpoint.
+
+![Key Vault Netzwerk Prod](docs/screenshots/kv-prod-networking.png)
+
+---
+
+### 🔹 Key Vault – Private Endpoint (Prod)
+
+Private Endpoint ist genehmigt und korrekt im VNet integriert.
+
+![Key Vault Private Endpoint](docs/screenshots/kv-prod-privateendpoint.png)
+
+---
+
+### 🔹 SQL Server – Public Access deaktiviert
+
+SQL Server ist nicht öffentlich erreichbar.
+
+![SQL Public Access Off](docs/screenshots/Sql-server-public-access-off.png)
+
+---
+
+### 🔹 SQL Server – Private Endpoint
+
+SQL Server ausschließlich über Private Endpoint erreichbar.
+
+![SQL Private Endpoint](docs/screenshots/Sql-server-private-endpoint.png)
+
+---
+
+### 🔹 Prod Umgebung – Ressourcenübersicht
+
+Getrennte Produktionsumgebung mit eigener Netzwerk- und Sicherheitskonfiguration.
+
+![Prod Ressourcen](docs/screenshots/prod-resources-PNG.png)
+
+---
+
+### 🔹 Remote Terraform State (Azure Storage Backend)
+
+Dev- und Prod-States sind zentral im Azure Storage Account gespeichert.
+
+![Terraform State Container](docs/screenshots/tf-state-container.png)
