@@ -180,7 +180,7 @@ Wartbarkeit, Skalierbarkeit und Wiederverwendbarkeit.
 # Governance
 
 ## Naming Convention
-<resource-type> - <environment> - <region> - <workload> - <instance>
+resource-type-environment-region-workload-instance
 
 ### Beispiele
 rg-prod-we-platform-01
@@ -266,7 +266,7 @@ Rollenbasierte Zugriffskontrolle (RBAC) mit Managed Identity für Applikationen.
 
 Private Connectivity über Private Endpoint zur Minimierung der Angriffsfläche.
 
-![SQL Private Endpoint Dev](docs/screenshots/sql-dev-privateendpoint.png)
+![SQL Private Endpoint Dev](docs/screenshots/Sql-dev-privateendpoint.png)
 
 ---
 
@@ -308,7 +308,7 @@ Genehmigte Private Endpoint-Verbindung innerhalb des dedizierten Subnets.
 
 Private Anbindung des SQL Servers an das Produktions-VNet.
 
-![SQL Private Endpoint Prod](docs/screenshots/sql-prod-privateendpoint.png)
+![SQL Private Endpoint Prod](docs/screenshots/Sql-prod-privateendpoint.png)
 
 ---
 
