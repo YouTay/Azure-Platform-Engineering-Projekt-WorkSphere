@@ -44,7 +44,6 @@ Dieses Projekt demonstriert meine Fähigkeiten im Bereich:
 
 ## High-Level Architekturdiagramm
 
-```mermaid
 flowchart LR
     subgraph Dev
         VNET_DEV[VNet Dev]
