@@ -250,7 +250,7 @@ Darstellung der vollständigen Infrastruktur inklusive Remote State, Terraform-A
 
 Alle bereitgestellten Ressourcen der Entwicklungsumgebung inklusive VNet, NSG, Private Endpoints, SQL und Key Vault.
 
-![Dev Ressourcenübersicht](docs/screenshots/dev-ressources.png)
+![Dev Ressourcenübersicht](docs/screenshots/dev-ressources(geschwärzt).png)
 
 ---
 
@@ -258,7 +258,7 @@ Alle bereitgestellten Ressourcen der Entwicklungsumgebung inklusive VNet, NSG, P
 
 Rollenbasierte Zugriffskontrolle (RBAC) mit Managed Identity für Applikationen.
 
-![Key Vault IAM Dev](docs/screenshots/Kv-iam-png.png)
+![Key Vault IAM Dev](docs/screenshots/Kv-iam-png(geschwärzt).png)
 
 ---
 
@@ -284,7 +284,7 @@ Konfiguration des Public Network Access gemäß Security-Policy.
 
 Produktionsumgebung mit erhöhter Sicherheitskonfiguration (z. B. Purge Protection, höheres SQL SKU, Criticality Tag = high).
 
-![Prod Ressourcenübersicht](docs/screenshots/prod-ressources.png)
+![Prod Ressourcenübersicht](docs/screenshots/prod-ressources(geschwärzt).png)
 
 ---
 
